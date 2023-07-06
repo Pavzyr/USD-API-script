@@ -18,7 +18,7 @@ async def send_message():
     today_course = get_usd_rate()
     total_price = 1623.5  # сумма, которую надо перевести из рублей в USD
     final_price = ((today_course/100)*3.1+today_course)*total_price
-    final_msg = f'Сегодняшний курс: {today_course:.2f} \nПерерасчет на курс туроператора: {final_price:.2f}'
+    final_msg = f'Сегодняшний курс (рубль к доллару): {today_course:.2f} \nПерерасчет на курс туроператора: {final_price:.2f}'
     print(final_msg)
     await bot.send_message(chat_id=chat_id, text=final_msg)
 
